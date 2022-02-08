@@ -1,0 +1,52 @@
+\begin{appendices}
+
+% e.g., User Manuals, supporting evidence for claims made in the main part of the dissertation (e.g. a copy of a user evaluation questionnaire), samples of test data, etc. Note that Appendices are optional.
+
+
+\chapter{Computational Code}
+Some Code snippets that includes the few logical functionalities of the application for review as below.
+
+Some backend service classes in Java Springboot which performs the logical programming part.
+
+User Feed service class where the algorithm works gathering categories and updating respective weights and updating user category-weight map.
+
+\lstinputlisting[firstline=20,lastline=75,title = UserFeed Service,language=java ]{code/UserFeedService.java}
+
+User feed service fetching personalized news feed based on ranking with weights and filtering in algorithm.
+\lstinputlisting[firstline=161,lastline=208,title = UserFeed Service ]{code/UserFeedService.java}
+\lstinputlisting[firstline=14,lastline=38, title = News Service]{code/DNewsService.java} 
+
+Below Springboot startup code runs the springboot application and also performs conversion of json news objects to database objects using Command line runner.
+\lstinputlisting[firstline=28,lastline=56,title = SpringBoot application startup ]{code/ProjectApplication.java}
+
+Sample Controller classes to explain api calls at backend.
+
+Login Controller with JWT token generation code
+
+\lstinputlisting[firstline=12,lastline=50, title = Login Controller ]{code/LoginController.java} 
+
+User Feed Controller where it recommends user-user similarity of interests based articles.
+\lstinputlisting[firstline=135,lastline=197, title = UserFeed Controller ]{code/UserFeedController.java} 
+
+JPA Native query fetching required news data based on parameters.
+\lstinputlisting[firstline=17,lastline=38, title = News Repository ]{code/DNewsRepository.java} 
+
+Security Configuration in Springboot
+\lstinputlisting[firstline=22,lastline=67, title = Spring Security  ]{code/SecurityConfig.java} 
+
+Frontend Code to display data in the client accomplished with Angular, HTML, bootstrap, CSS.
+
+Globe data showing specified country information and category filter in addition to country achieved using amcharts and Behavioral Subjects in angular.
+\lstinputlisting[firstline=20,lastline=217, title = Global Visulization,language=java]{code/globaldata.component.ts} 
+
+User Profile with user data is displayed and editable in frontend with category weight in pie-charts visualization.
+\lstinputlisting[firstline=16,lastline=141, title = User Profile and chart Visualization]{code/user-profile.component.ts} 
+
+Evaluation performed with Test Driven development and sample test case snippets.
+Sample User add, find and update testcases.
+\lstinputlisting[firstline=24,lastline=123, title = User Testcases]{code/UserControllerTest.java} 
+
+Userfeed Controller tests that verifies all the interactions are working as expected with assert conditions.
+
+\lstinputlisting[firstline=41,lastline=142, title = User Feed Testcases]{code/UserFeedControllerTest.java} 
+\end{appendices}

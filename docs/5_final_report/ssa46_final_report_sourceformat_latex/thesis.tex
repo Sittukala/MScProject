@@ -1,0 +1,84 @@
+% Yue Li, June 2017
+
+\documentclass[a4paper,12pt,twoside]{report}
+\usepackage[left=2.5cm,right=2.5cm,top=2cm,bottom=3cm]{geometry}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{listings}
+
+\usepackage{listings}
+\usepackage{minted}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3,
+  frame=single,
+}
+
+
+
+\include{thesis.preamble}
+
+
+\begin{document}
+
+\title{Personalized Buzzfeed}
+
+\author{Sittukala Saravana Alagappan}
+\submitdate{September 2021}
+\degree{MSc Advanced Computer Science}
+\studentid{199034381}
+\supervisor{Panneerselvam, John K. (Dr.) and 
+Ulidowski, Irek (Dr.)}
+
+
+\normallinespacing
+\maketitle
+
+% delete the two declaration sentences in thesis.sty if not applicable. 
+
+\preface
+\input{abstract/abstract}
+\input{acknowledgements/acknowledgements}
+
+% There is a maximum limit of 15,000 words without exceeding 40 pages (A4 sides) for the main body of the dissertation that will be submitted in PDF. This limitation includes the bibliography and excludes cover/front pages (e.g., abstract, acknowledgement, table of contents) and excludes the appendices, listing of any codes or any other supporting documentation.
+% Note: Your dissertation should not exceed the word and page limits. You do not have to use up your word limit to get a good grade; never `pad out' your dissertation, this will only annoy the markers.
+
+\body
+\input{introduction/introduction}
+\input{background/background}
+
+% body of thesis comes here
+\input{body/body}
+
+\input{summary/summary}
+
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{acm}
+\bibliography{bibliography/bibliography}
+
+
+
+% appendices come here
+
+\input{appendices/appendix}
+
+
+\end{document}
